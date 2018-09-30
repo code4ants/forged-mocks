@@ -1,5 +1,5 @@
 # forged-mocks
-Extensive set of libraries providing service mocks for most common protocols and 3rd party services.
+A library providing service mocks for most common protocols and 3rd party services, needed for efficient and comfortable integration tests development.
 
 # Goals
 The goal is to build a Java library that provides service mocks for most common type of services that are used when building applications: HTTP servers, SOAP/REST web services, JDBC, JMS, SMTP, etc. 

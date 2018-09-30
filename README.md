@@ -20,9 +20,9 @@ The project is composed of two tiers, each with a clear set of components:
 The initial library structure plan could be the following:
 - the library is distributed as Maven artifacts, available from the central repo
 - the library is composed of the following artifacts:
-    - code4ants.forgedmocks:forgedmocks-base:<version> - the common classes of each other library. This module also provides the basic model to be used in the other libraries
-    - code4ants.forgedmocks:forgedmocks-http:<version> - the HTTP service mock
-    - code4ants.forgedmocks:forgedmocks-smtp:<version> - the SMTP/mail service mock
-    - code4ants.forgedmocks:forgedmocks-soap:<version> - the SOAP webservice mock
-    - code4ants.forgedmocks:forgedmocks-rest:<version> - the REST webservice mock
-    - code4ants.forgedmocks:forgedmocks-jdbc:<version> - the JDBC/database mock
+    - code4ants.forgedmocks:forgedmocks-base:1.0 - the common classes of each other library. This module also provides the basic model to be used in the other libraries
+    - code4ants.forgedmocks:forgedmocks-http:1.0 - the HTTP service mock
+    - code4ants.forgedmocks:forgedmocks-smtp:1.0 - the SMTP/mail service mock
+    - code4ants.forgedmocks:forgedmocks-soap:1.0 - the SOAP webservice mock
+    - code4ants.forgedmocks:forgedmocks-rest:1.0 - the REST webservice mock
+    - code4ants.forgedmocks:forgedmocks-jdbc:1.0 - the JDBC/database mock

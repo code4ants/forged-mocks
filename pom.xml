@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>code4ants.forgedmocks</groupId>
+    <artifactId>forgedmocks-parent</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+    <inceptionYear>2018</inceptionYear>
+    <organization>
+        <name>code4ants</name>
+        <url>https://github.com/code4ants</url>
+    </organization>
+
+    <name>ForgedMocks</name>
+    <description>A library providing service mocks for most common protocols and 3rd party services, needed for
+        efficient and comfortable integration tests development.
+    </description>
+
+    <developers>
+        <developer>
+            <name>Adrian Scripcă</name>
+            <email>adrian.scripca@gmail.com</email>
+        </developer>
+        <developer>
+            <name>Bogdan Mocanu</name>
+            <email>bogdan.mocanu@gmail.com</email>
+        </developer>
+    </developers>
+
+    <modules>
+        <module>base</module>
+        <module>http</module>
+    </modules>
+
+    <properties>
+        <forgedMocksBaseVersion>1.0-SNAPSHOT</forgedMocksBaseVersion>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <junitVersion>4.12</junitVersion>
+    </properties>
+
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>3.8.0</version>
+                    <configuration>
+                        <source>1.8</source>
+                        <target>1.8</target>
+                    </configuration>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>junit</groupId>
+                <artifactId>junit</artifactId>
+                <version>${junitVersion}</version>
+                <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>code4ants.forgedmocks</groupId>
+                <artifactId>forgedmocks-base</artifactId>
+                <version>1.0-SNAPSHOT</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+
+</project>

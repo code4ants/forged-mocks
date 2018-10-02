@@ -1,0 +1,3 @@
+= ForgedMocks Documentation
+Adrian Scripcă <adrian.scripca@gmail.com>
+Bogdan Mocanu <bogdan.mocanu@gmail.com>

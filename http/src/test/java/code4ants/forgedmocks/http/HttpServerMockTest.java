@@ -14,7 +14,7 @@ public class HttpServerMockTest {
 
     @Test
     public void testReceiveCorrectStatus() throws Exception {
-        try (HttpServerMock server = new HttpServerMock(new PortRange(20000, 30000))) {
+        try (HttpServer server = new HttpServer(new PortRange(20000, 30000))) {
             server.handle("/no-content-endpoint", (request, response) -> response.end(HttpStatus.NO_CONTENT));
 
             HttpResponse<String> response = Unirest.get(server.getUrl("/no-content-endpoint")).asString();
@@ -27,7 +27,7 @@ public class HttpServerMockTest {
 
     @Test
     public void testReceiveCorrectBody() throws Exception {
-        try (HttpServerMock server = new HttpServerMock(new PortRange(20000, 30000))) {
+        try (HttpServer server = new HttpServer(new PortRange(20000, 30000))) {
             // given
             server.handle("/content-endpoint",
                     (request, response) ->
@@ -45,7 +45,7 @@ public class HttpServerMockTest {
 
     @Test
     public void testNotFoundIsReturnedOnUnhandledEndpoint() throws Exception {
-        try (HttpServerMock server = new HttpServerMock(new PortRange(20000, 30000))) {
+        try (HttpServer server = new HttpServer(new PortRange(20000, 30000))) {
             // when
             HttpResponse<String> response = Unirest.get(server.getUrl("/not-existent-endpoint")).asString();
             // then

@@ -1,6 +1,6 @@
 package code4ants.forgedmocks.http;
 
-import code4ants.forgedmocks.commons.RoundRobinSelectionPolicy;
+import code4ants.forgedmocks.commons.RandomSelectionPolicy;
 import code4ants.forgedmocks.commons.SelectionPolicy;
 
 public class PortRange {
@@ -11,7 +11,7 @@ public class PortRange {
     public PortRange(int from, int to) {
         this.fromPort = from;
         this.toPort = to;
-        this.selectionPolicy = new RoundRobinSelectionPolicy(from, to);
+        this.selectionPolicy = new RandomSelectionPolicy(from, to);
     }
 
     int nextPort() {
